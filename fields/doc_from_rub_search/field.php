@@ -108,6 +108,18 @@
 										Id = '" . $list_item . "'
 								")->FetchAssocArray();
 							}
+							else
+							{
+								$field_param = explode('|', $list_item);
+								$list_item = preg_replace_callback(
+								    '/\[tag:parametr:(\d+)\]/i',
+								    function($data) use($field_param)
+								    {
+									return $field_param[(int)$data[1]];
+								    },
+								    $tpl
+								);
+							}
 						}
 						$res[] = $list_item;
 					}
