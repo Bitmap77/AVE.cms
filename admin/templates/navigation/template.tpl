@@ -75,7 +75,7 @@
 		<tr>
 			<td width="200"><strong>{#NAVI_PRINT_TYPE#}</strong></td>
 			<td>
-				<select name="expand_ext" style="width: 300px;">
+				<select name="expand_ext">
 					<option value="1"{if $navigation->expand_ext == 1} selected{/if}/>{#NAVI_EXPAND_ALL#}</option>
 					<option value="0"{if $navigation->expand_ext == 0} selected{/if}/>{#NAVI_EXPAND_WAY#}</option>
 					<option value="2"{if $navigation->expand_ext == 2} selected{/if}/>{#NAVI_EXPAND_LEVEL#}</option>
@@ -86,7 +86,7 @@
 		<tr>
 			<td width="200"><strong>{#NAVI_GROUPS#}</strong></td>
 			<td>
-				<select class="mousetrap select" name="user_group[]" multiple="multiple" size="5" style="width:300px">
+				<select class="mousetrap select" name="user_group[]" multiple="multiple" size="5">
 					{if $smarty.request.action=='new'}
 						{foreach from=$groups item=group}
 							<option value="{$group->user_group}" selected="selected">{$group->user_group_name|escape}</option>
@@ -165,7 +165,8 @@
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Style" onclick="textSelection_1_2('[tag:css_style]','');">[tag:css_style]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS ID" onclick="textSelection_1_2('[tag:css_id]','');">[tag:css_id]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_1_2('[tag:css_class]','');">[tag:css_class]</a></strong><br />
-				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_1_2('[tag:level:2]','');">[tag:level:2]</a></strong>
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_1_2('[tag:level:2]','');">[tag:level:2]</a></strong><br />
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_LINKEDDOC_ID#}" onclick="textSelection_1_2('[tag:document_id]','');">[tag:document_id]</a></strong>
 			</td>
 			<td>
 				<div class="pr12">
@@ -237,7 +238,8 @@
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Style" onclick="textSelection_1_3('[tag:css_style]','');">[tag:css_style]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS ID" onclick="textSelection_1_3('[tag:css_id]','');">[tag:css_id]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_1_3('[tag:css_class]','');">[tag:css_class]</a></strong><br />
-				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_1_3('[tag:level:2]','');">[tag:level:2]</a></strong>
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_1_3('[tag:level:2]','');">[tag:level:2]</a></strong><br />
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_LINKEDDOC_ID#}" onclick="textSelection_1_3('[tag:document_id]','');">[tag:document_id]</a></strong>
 			</td>
 			<td><div class="pr12"><textarea style="width:100%" name="level1_active" rows="12" id="level1_active">{$navigation->level1_active|escape}</textarea></div></td>
 		</tr>
@@ -352,7 +354,8 @@
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Style" onclick="textSelection_2_2('[tag:css_style]','');">[tag:css_style]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS ID" onclick="textSelection_2_2('[tag:css_id]','');">[tag:css_id]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_2_2('[tag:css_class]','');">[tag:css_class]</a></strong><br />
-				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_2_2('[tag:level:3]','');">[tag:level:3]</a></strong>
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_2_2('[tag:level:3]','');">[tag:level:3]</a></strong><br />
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_LINKEDDOC_ID#}" onclick="textSelection_2_2('[tag:document_id]','');">[tag:document_id]</a></strong>
 			</td>
 			<td>
 				<div class="pr12"><textarea style="width:100%" name="level2" rows="12" id="level2">{$navigation->level2|escape}</textarea></div>
@@ -420,7 +423,8 @@
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Style" onclick="textSelection_2_3('[tag:css_style]','');">[tag:css_style]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS ID" onclick="textSelection_2_3('[tag:css_id]','');">[tag:css_id]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_2_3('[tag:css_class]','');">[tag:css_class]</a></strong><br />
-				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_2_3('[tag:level:3]','');">[tag:level:3]</a></strong>
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_PLACE_INSERT#}" onclick="textSelection_2_3('[tag:level:3]','');">[tag:level:3]</a></strong><br />
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_LINKEDDOC_ID#}" onclick="textSelection_2_3('[tag:document_id]','');">[tag:document_id]</a></strong>
 			</td>
 			<td><div class="pr12"><textarea style="width:100%" name="level2_active" rows="12" id="level2_active">{$navigation->level2_active|escape}</textarea></div></td>
 		</tr>
@@ -532,7 +536,8 @@
 				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_IMAGE_ID#}" onclick="textSelection_3_2('[tag:img_id]','');">[tag:img_id]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Style" onclick="textSelection_3_2('[tag:css_style]','');">[tag:css_style]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS ID" onclick="textSelection_3_2('[tag:css_id]','');">[tag:css_id]</a></strong><br />
-				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_3_2('[tag:css_class]','');">[tag:css_class]</a></strong>
+				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_3_2('[tag:css_class]','');">[tag:css_class]</a></strong><br />
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_LINKEDDOC_ID#}" onclick="textSelection_3_2('[tag:document_id]','');">[tag:document_id]</a></strong>
 			</td>
 			<td><div class="pr12"><textarea style="width:100%" name="level3" rows="12" id="level3">{$navigation->level3|escape}</textarea></div></td>
 		</tr>
@@ -593,7 +598,8 @@
 				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_IMAGE_ID#}" onclick="textSelection_3_3('[tag:img_id]','');">[tag:img_id]</a></strong><br/>
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Style" onclick="textSelection_3_3('[tag:css_style]','');">[tag:css_style]</a></strong><br />
 				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS ID" onclick="textSelection_3_3('[tag:css_id]','');">[tag:css_id]</a></strong><br />
-				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_3_3('[tag:css_class]','');">[tag:css_class]</a></strong>
+				<strong><a class="rightDir"  style="cursor: pointer;" title="CSS Class" onclick="textSelection_3_3('[tag:css_class]','');">[tag:css_class]</a></strong><br />
+				<strong><a class="rightDir"  style="cursor: pointer;" title="{#NAVI_ITEM_LINKEDDOC_ID#}" onclick="textSelection_3_3('[tag:document_id]','');">[tag:document_id]</a></strong>
 			</td>
 			<td><div class="pr12"><textarea style="width:100%" name="level3_active" rows="12" id="level3_active">{$navigation->level3_active|escape}</textarea></div></td>
 		</tr>
